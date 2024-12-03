@@ -129,6 +129,23 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
     love_date = date(love_year, love_month, love_day)
     # 获取在一起的日期差
     love_days = str(today.__sub__(love_date)).split(" ")[0]
+
+        # 获取亲亲的日期格式
+    kiss_year = int(config.kiss_date.split("-")[0])
+    kiss_month = int(config.kiss_date.split("-")[1])
+    kiss_day = int(config.kiss_date.split("-")[2])
+    kiss_date = date(kiss_year, kiss_month, kiss_day)
+    # 获取亲亲的日期差
+    kiss_days = str(today.__sub__(kiss_date)).split(" ")[0]
+    
+    # 获取贴贴的日期格式
+    tie_year = int(config.tie_date.split("-")[0])
+    tie_month = int(config.tie_date.split("-")[1])
+    tie_day = int(config.tie_date.split("-")[2])
+    tie_date = date(tie_year, tie_month, tie_day)
+    # 获取贴贴的日期差
+    tie_days = str(today.__sub__(tie_date)).split(" ")[0]
+
     # 获取生日的月和日
     #birthday_month = int(config.birthday.split("-")[1])
     #birthday_day = int(config.birthday.split("-")[2])
